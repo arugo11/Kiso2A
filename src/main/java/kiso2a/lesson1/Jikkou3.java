@@ -1,8 +1,7 @@
-package kiso2a_1;
-
-
+package kiso2a.lesson1;
 
 public class Jikkou3 {
+
 
     public static void main(String[] args)
     {
@@ -21,7 +20,9 @@ public class Jikkou3 {
         for(int i = 1; i < max + 1; i++)
         {
             mySaifu.setOkane(mySaifu.getOkane() + okodukai);
-            System.out.println(String.format("day=%d okane=%d", i,mySaifu.getOkane()));
+            
+                System.out.println(String.format("day=%d okane=%d", i,mySaifu.getOkane()));
+            
             okodukai *= 2;
         }
 

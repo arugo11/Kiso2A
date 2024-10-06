@@ -1,4 +1,4 @@
-package kiso2a_1;
+package kiso2a.lesson1;
 
 public class Saifu2 {
 
@@ -16,6 +16,4 @@ public class Saifu2 {
         
 
     }
-
-    
 
