@@ -1,4 +1,4 @@
-package kiso2a_1;
+package kiso2a.lesson1;
 
 public class Jikkou2 {
     public static void main(String[] args)
