@@ -47,4 +47,4 @@ Thumbs.db
 *~
 
 # document
-*.pdf
+docs/*
