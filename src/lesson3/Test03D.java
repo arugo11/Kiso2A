@@ -15,5 +15,9 @@ public class Test03D {
 
         list.concat(list2);
         list.print();
+
+        MyList list3 = list2;
+        list2.concat(list3);
+        list.print();
     }
 }
