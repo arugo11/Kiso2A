@@ -1,19 +1,21 @@
-public class MyList {
-    ListNode head = new ListNode();
+public class MyList { 
+    private ListNode head;
 
     void add(int x)
     {
         ListNode newNode = new ListNode(x);
-        if(head.next == null)
+        if(head == null)
         {
-            head.next = newNode;
+            head = newNode;
         }else
         {
-            ListNode p = head;
-            while(p.next != null)
+            ListNode current = head;
+            while(current.next != null)
             {
-                p = p.next;
+                current = current.next;
             }
+
+            current.next = newNode;
 
         }
     }
@@ -26,7 +28,7 @@ public class MyList {
             System.out.print(p.key + " ");
             p = p.next;
         }
-        system.out.println();
+        System.out.println();
     }
 
     int indexOf(int x)
@@ -54,7 +56,6 @@ public class MyList {
             p = p.next;
         }
 
-        throw new IndexOutOfBoundsException();
-        
+        throw new IndexOutOfBoundsException(n);
     }
 }

@@ -1,6 +1,6 @@
 public class ListNode {
     int key;
-    ListNode next = new ListNode();
+    ListNode next;
 
     ListNode(int x)
     {
