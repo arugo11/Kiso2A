@@ -58,4 +58,19 @@ public class MyList {
 
         throw new IndexOutOfBoundsException(n);
     }
+
+    void concat(MyList list)
+    {
+        if(head == null)
+        {
+            head = list.head;
+        }else {
+            ListNode current = head;
+            while(current.next != null)
+            {
+                current = current.next;
+            }
+            current.next = list.head;
+        }
+    }
 }
