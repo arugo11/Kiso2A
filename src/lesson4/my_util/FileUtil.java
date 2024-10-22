@@ -9,12 +9,11 @@ public class FileUtil {
             String text = "";
               BufferedReader br =
                 new BufferedReader(
-                    new InputStreamReader(
-                        new FileInputStream(filename),"SJIS"));
+                    new FileReader(filename));
             while((line = br.readLine()) != null){
                 text += line + "\n";
             }
-            System.out.println(text);
+            // System.out.println(text);
             br.close();
             return text;
         }catch(IOException e){
@@ -34,7 +33,7 @@ public class FileUtil {
         while((line = br.readLine()) != null){
             text += line + "\n";
         }
-        System.out.println(text);
+        // System.out.println(text);
         br.close();
         return text;
         }catch(IOException e){
