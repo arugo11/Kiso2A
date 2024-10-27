@@ -44,7 +44,7 @@ public class FileUtil {
                     new FileInputStream(filename),enc));
         StringBuilder text = new StringBuilder();
         while((line = br.readLine()) != null){
-           text.append(line).append("/n");
+           text.append(line).append("\n");
         }
         br.close();
         return text.toString();
