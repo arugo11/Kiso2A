@@ -23,7 +23,7 @@ public class FileUtil {
                 text.append(line).append("\n");
             }
             br.close();
-            return text;
+            return text.toString();
         }catch(IOException e){
             e.printStackTrace();
             return null;
@@ -47,7 +47,7 @@ public class FileUtil {
            text.append(line).append("/n");
         }
         br.close();
-        return text;
+        return text.toString();
         }catch(IOException e){
             e.printStackTrace();
             return null;
