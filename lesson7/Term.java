@@ -4,14 +4,21 @@ public class Term extends Node {
         System.out.println("Term eval start");
         System.out.println("Term childList size: " + childList.size());
         
-        double val = childList.get(0).eval(state);
+        // デバッグ用に最初の子の型を確認
+        Node firstChild = childList.get(0);
+        System.out.println("Term first child type: " + firstChild.getClass().getName());
+        
+        double val = firstChild.eval(state);  // 変数名を変更して明確に
         System.out.println("Term initial value: " + val);
         
         for (int i = 1; i < childList.size(); i += 2) {
             Token t = (Token)childList.get(i);
             System.out.println("Term operator: " + t.str);
             
-            Factor f = (Factor)childList.get(i + 1);
+            Node nextChild = childList.get(i + 1);  // 次の子の型も確認
+            System.out.println("Term next child type: " + nextChild.getClass().getName());
+            
+            Factor f = (Factor)nextChild;
             double factorVal = f.eval(state);
             System.out.println("Term factor value: " + factorVal);
             
@@ -27,5 +34,9 @@ public class Term extends Node {
         }
         System.out.println("Term returning value: " + val);
         return val;
+    }
+    
+    public String toString() {  // toString()メソッドも追加
+        return "Term";
     }
 }
