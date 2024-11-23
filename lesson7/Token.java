@@ -23,6 +23,7 @@ public class Token extends Node {
     double eval(Map<String, Expression> state) {
         // 処理内容を考えて
         // ここに実装する
+        //? これ実装する必要ある?? -> 実装しなくて問題ないっぽい(pdfのP.2)
 
         return 0; // これはダミー
     }
