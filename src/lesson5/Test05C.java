@@ -3,6 +3,8 @@ import java.util.*;
 
 /**
  * テキストファイル内の単語出現回数をカウントするプログラム
+ * @author AL23088 嶋中雄大
+ * @file Test05C.java
  */
 class Test05C {
     /**
@@ -11,7 +13,7 @@ class Test05C {
      * @return 正規化された単語
      */
     private static String normalizeWord(String word) {
-        // 小文字に変換し、記号を除去
+        // 小文字に変換,記号を除去
         return word.toLowerCase()
                   .replaceAll("[.!,?\"';:()/\\[\\]{}]", "")
                   .trim();
@@ -44,7 +46,7 @@ class Test05C {
             // 出現回数でソートされた単語リストを取得
             List<String> wordList = counter.getSortedWordList();
             
-            // 上位20単語までを出力
+            // 上位20単語
             int limit = Math.min(20, wordList.size());
             for (int i = 0; i < limit; i++) {
                 String word = wordList.get(i);
