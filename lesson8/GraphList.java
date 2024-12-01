@@ -3,7 +3,10 @@ import java.util.*;
 public class GraphList {
     int numV;
     List<LinkedList<Integer>> adj; // 整数型のリンクリストのリスト adj
-
+    /**
+     * 2次元配列の作成
+     * @param numV　ノード数
+     */
     public GraphList(int numV) {
         this.numV = numV;
         adj = new ArrayList<LinkedList<Integer>>();// 整数型のリンクリストのArrayList adjを作る
