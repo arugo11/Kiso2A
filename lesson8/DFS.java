@@ -16,25 +16,31 @@ public class DFS {
 
   // DFS recursive
   void DFSrecursive(int u) {
-
-    //////////////////////////////////////////////////////
-    // 以下コメントアウトの行を描きなさい．
-
     // 頂点uに訪問したという印をつける
+    done[u] = true;
+    
     // 訪問したノードuを出力
+    System.out.print(u);
+    
     // ノードuの隣接頂点のリストからIterator itrを作成．返り値の型は整数．
+    Iterator<Integer> itr = adj.get(u).iterator();
+    
     // while( 隣接要素がまだある? ) {　
-    // 取得した隣接要素をvとする
-    // if(vがまだ訪問されていない){
-    // 次を指す矢印を出力
-    // 頂点vについて再帰的に深さ優先探索を呼び出す
-    // if文を閉じる
+    while(itr.hasNext()) {
+        // 取得した隣接要素をvとする
+        int v = itr.next();
+        
+        // if(vがまだ訪問されていない){
+        if(!done[v]) {
+            // 次を指す矢印を出力
+            System.out.print(">");
+            // 頂点vについて再帰的に深さ優先探索を呼び出す
+            DFSrecursive(v);
+        }    
+        // if文を閉じる
+    }    
     // while文を閉じる
-
-    //////////////////////////////////////////////////////
-
-  }
-
+}
 
 
 }
