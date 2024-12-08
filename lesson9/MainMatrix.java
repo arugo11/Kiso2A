@@ -18,7 +18,7 @@ public class MainMatrix {
                 // 整数をキーボードから取得
                 int start_node = scanner.nextInt();
 
-
+            /*wget https://raw.github.com/arugo11/Kiso2A/tree/main/lesson8/GraphMatrixWeight.java`*/
                 GraphMatrixWeight g = new GraphMatrixWeight(numV); // 隣接行列
 
                 String filePath = "./data.txt";

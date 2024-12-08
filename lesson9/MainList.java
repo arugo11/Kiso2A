@@ -25,7 +25,7 @@ public class MainList {
                 // 整数をキーボードから取得
                 end_node = scanner.nextInt();
             }
-
+            /*wget https://raw.githubusercontent.com/arugo11/Kiso2A/main/lesson8/GraphListWeight.java */
             GraphListWeight g = new GraphListWeight(numV); // 隣接リスト
 
             String filePath = "./data.txt";
