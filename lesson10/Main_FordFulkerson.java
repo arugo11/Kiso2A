@@ -71,10 +71,10 @@ br.close();
 // 課題2-2. 幅優先探索が動くかの確認用 (ここまで)
 
 
-// // 課題2-3. Ford-Fulkerson法の動作
-//       int maxflow = m.fordFulkerson(g.adj, s, t);
-//       System.out.println("最大流は" + maxflow);
-// // 課題2-3. Ford-Fulkerson法の動作 (ここまで)
+// 課題2-3. Ford-Fulkerson法の動作
+      int maxflow = m.fordFulkerson(g.adj, s, t);
+      System.out.println("最大流は" + maxflow);
+// 課題2-3. Ford-Fulkerson法の動作 (ここまで)
 
     } catch (IOException e) {
         e.printStackTrace();
