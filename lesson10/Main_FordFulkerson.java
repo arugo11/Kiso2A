@@ -76,6 +76,7 @@ br.close();
       System.out.println("最大流は" + maxflow);
 // 課題2-3. Ford-Fulkerson法の動作 (ここまで)
 
+
     } catch (IOException e) {
         e.printStackTrace();
     }
