@@ -18,7 +18,7 @@ public class GraphMatrixWeight {
       adj[i][j] += w;
     }
 
-  
+
     // 行列の表示
     public void printG(){
       StringBuilder s = new StringBuilder();

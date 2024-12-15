@@ -76,7 +76,20 @@ br.close();
       System.out.println("最大流は" + maxflow);
 // 課題2-3. Ford-Fulkerson法の動作 (ここまで)
 
-
+// 発展 - ノードiを削除したとき,最大流がどのように変化するか
+      for (int i = 0; i < g.adj.length; i++){
+        for (int j = 0; j < g.adj.length; j++){
+          if (g.adj[i][j] > 0 && i != s && i != t){
+            g.adj[i][j] = 0;
+            int maxflow2 = m.fordFulkerson(g.adj, s, t);
+            System.out.println("ノード" + i + "を削除したときの最大流は" + maxflow2);
+            g.adj[i][j] = 1;
+          }
+        }
+      }
+  /* 以上のような発展を考えましたが, あんまりおもしろくなかったので以下追加 */
+  /* もし, 電車の遅延のように時間でランダムでコストが増加したり減少したりしたときに*/
+  
     } catch (IOException e) {
         e.printStackTrace();
     }

@@ -40,13 +40,15 @@ class FordFulkerson {
 
    while(bfs(Gf, s, t, p)){
      int path_flow = Integer.MAX_VALUE;
+     /* シンクからソースに向かって親ノードを辿る */
+     /* 辿った中で一番軽い重さをフローとする */
      for(v = t; v != s; v = p[v]){
        u = p[v];
        if(path_flow > Gf[u][v]){
          path_flow = Gf[u][v];
        }
      }
-
+     /* 残余グラフを計算 */
      for(v = t; v != s; v = p[v]){
        u = p[v];
        Gf[u][v] -= path_flow;
